@@ -13,6 +13,10 @@ contract Voter {
   }
 
   function vote(string startup) public {
+    if (votes[startup] == 0) {
+      startups.push(startup);
+    }
+
     votes[startup] += 1;
   }
 

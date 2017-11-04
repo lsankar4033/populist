@@ -9,8 +9,11 @@ contract History {
 
   // key is date string of form 1/2/2017 representing Jan 2, 2017
   mapping (string => Record) dateToRecord;
+  string[] dates;
 
+  // NOTE: Currently only assumes that this is called *once* for each dateStr
   function archiveRecord(string dateStr, string startup, uint votes) public {
     dateToRecord[dateStr] = Record(startup, votes);
+    dates.push(dateStr);
   }
 }

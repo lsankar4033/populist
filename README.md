@@ -1,4 +1,9 @@
 ## TODO
-- History contract
+[x] History contract
 - contract tests
-- react setup
+- server setup (communicating with contracts)
+- server setup (react app)
+- frontend setup (react)
+- hosting (heroku?)
+- design pass
+- mobile frontend?

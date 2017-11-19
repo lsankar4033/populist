@@ -16,4 +16,11 @@ contract History {
     dateToRecord[dateStr] = Record(startup, votes);
     dates.push(dateStr);
   }
+
+  // NOTE: Change the return type here based on structure of Record. Sadly, solidity doesn't allow returning
+  // Structs.
+  function getRecord(string dateStr) view public returns(string, uint) {
+    Record memory rec = dateToRecord[dateStr];
+    return (rec.startup, rec.votes);
+  }
 }
